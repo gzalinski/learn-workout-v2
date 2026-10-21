@@ -1,7 +1,8 @@
 import 'colors'
 import express from 'express'
 import authRoutes from './app/auth/auth.routes.js'
-require('dotenv').config()
+
+dotenv.config()
 
 const app = express()
 
@@ -12,8 +13,7 @@ async function main() {
 	}
 
 	if (process.env.NODE_ENV === 'development') {
-		const morgan = require('morgan')
-		app.use(morgan('combined'))
+		app.use(morgan('dev'))
 	}
 
 	app.use(express.json())
