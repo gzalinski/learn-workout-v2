@@ -1,0 +1,24 @@
+{
+	"name": "workout-app-record",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"workout",
+		"app"
+	],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@trivago/prettier-plugin-sort-imports": "^6.0.2",
+		"colors": "^1.4.0",
+		"express": "^5.3.0"
+	},
+	"dependencies": {
+		"dotenv": "^18.0.8"
+	}
+}
