@@ -1,15 +1,16 @@
 import 'colors'
-import dotenv from 'dotenv'
+import 'dotenv/config'
 import express from 'express'
 import morgan from 'morgan'
-import authRoutes from './app/auth/auth.routes.js'
 
-dotenv.config()
+import authRoutes from './app/auth/auth.routes.js'
 
 const app = express()
 
 async function main() {
-	if (!process.env.PORT) {
+	const PORT = process.env.PORT
+
+	if (!PORT) {
 		console.error('Error: PORT environment variable is not defined'.red.bold)
 		process.exit(1)
 	}
@@ -20,13 +21,13 @@ async function main() {
 
 	app.use(express.json())
 	app.use('/api/auth', authRoutes)
-	app.listen(
-		process.env.PORT,
+
+	app.listen(PORT, () => {
 		console.log(
 			`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.green
 				.bold
 		)
-	)
+	})
 }
 
 main()
