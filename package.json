@@ -6,8 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "nodemon ./server.js",
-		"start": "node ./server.js",
-		"postinstall": "prisma skills sync || exit 0"
+		"start": "node ./server.js"
 	},
 	"keywords": [
 		"workout",
@@ -18,13 +17,13 @@
 	"devDependencies": {
 		"@trivago/prettier-plugin-sort-imports": "^6.0.2",
 		"colors": "^1.4.0",
-		"express": "^5.3.0",
 		"morgan": "^1.12.1",
 		"nodemon": "^3.1.14",
 		"prisma": "4.8.1"
 	},
 	"dependencies": {
 		"@prisma/client": "4.8.1",
-		"dotenv": "^18.0.8"
+		"dotenv": "^18.0.8",
+		"express": "^5.3.0"
 	}
 }
