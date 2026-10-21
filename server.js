@@ -1,5 +1,7 @@
 import 'colors'
+import dotenv from 'dotenv'
 import express from 'express'
+import morgan from 'morgan'
 import authRoutes from './app/auth/auth.routes.js'
 
 dotenv.config()
